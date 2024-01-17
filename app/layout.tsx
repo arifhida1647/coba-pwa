@@ -16,7 +16,197 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Emeles.id</title>
+      </head>
+      <body className={inter.className}>
+        <div className='font-rubik'>
+          {/* navbar dekstop */}
+          <nav className="bg-white w-full z-20 top-0 start-0 border-b border-gray-200">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+              <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/logo.svg" className="h-14 hidden md:block" alt="Logo" />
+                <img src="/logo.svg" className="h-4 md:hidden" alt="Logo" />
+
+              </a>
+              <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" className="hidden md:block text-gray-900 bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mx-5 text-center ">Masuk</button>
+                <button type="button" className="text-white bg-hijau2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-full text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">Daftar Sekarang</button>
+              </div>
+              <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                  <li>
+                    <a href="#" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a>
+                  </li>
+                  <li className="relative">
+                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                      <span className="absolute top-0 right-0 transform -translate-y-full inline-block px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">Hot</span>
+                      Promotions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          {/* Bottom Navbar Mobile */}
+          <div className="md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 mx-auto">
+            <div className="grid h-full max-w-lg grid-cols-3 mx-auto font-medium">
+              <button type="button" className="inline-flex flex-col items-center justify-center px-5  group">
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.375 21.0913H1.625C0.727997 21.0913 0 20.3633 0 19.4663C0 18.5693 0.727997 17.8413 1.625 17.8413H37.375C38.272 17.8413 39 18.5693 39 19.4663C39 20.3633 38.272 21.0913 37.375 21.0913Z" fill="#757575" />
+                  <path d="M37.375 8.63281H1.625C0.727997 8.63281 0 7.90482 0 7.00781C0 6.11081 0.727997 5.38281 1.625 5.38281H37.375C38.272 5.38281 39 6.11081 39 7.00781C39 7.90482 38.272 8.63281 37.375 8.63281Z" fill="#757575" />
+                  <path d="M37.375 33.5493H1.625C0.727997 33.5493 0 32.8213 0 31.9243C0 31.0273 0.727997 30.2993 1.625 30.2993H37.375C38.272 30.2993 39 31.0273 39 31.9243C39 32.8213 38.272 33.5493 37.375 33.5493Z" fill="#757575" />
+                </svg>
+                <span className="text-sm text-gray-500">Home</span>
+              </button>
+              <button type="button" className="inline-flex flex-col items-center justify-center px-5  group">
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.375 21.0913H1.625C0.727997 21.0913 0 20.3633 0 19.4663C0 18.5693 0.727997 17.8413 1.625 17.8413H37.375C38.272 17.8413 39 18.5693 39 19.4663C39 20.3633 38.272 21.0913 37.375 21.0913Z" fill="#757575" />
+                  <path d="M37.375 8.63281H1.625C0.727997 8.63281 0 7.90482 0 7.00781C0 6.11081 0.727997 5.38281 1.625 5.38281H37.375C38.272 5.38281 39 6.11081 39 7.00781C39 7.90482 38.272 8.63281 37.375 8.63281Z" fill="#757575" />
+                  <path d="M37.375 33.5493H1.625C0.727997 33.5493 0 32.8213 0 31.9243C0 31.0273 0.727997 30.2993 1.625 30.2993H37.375C38.272 30.2993 39 31.0273 39 31.9243C39 32.8213 38.272 33.5493 37.375 33.5493Z" fill="#757575" />
+                </svg>
+                <span className="text-sm text-gray-500 ">Promotions</span>
+              </button>
+              <button type="button" className="inline-flex flex-col items-center justify-center px-5  group">
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.375 21.0913H1.625C0.727997 21.0913 0 20.3633 0 19.4663C0 18.5693 0.727997 17.8413 1.625 17.8413H37.375C38.272 17.8413 39 18.5693 39 19.4663C39 20.3633 38.272 21.0913 37.375 21.0913Z" fill="#757575" />
+                  <path d="M37.375 8.63281H1.625C0.727997 8.63281 0 7.90482 0 7.00781C0 6.11081 0.727997 5.38281 1.625 5.38281H37.375C38.272 5.38281 39 6.11081 39 7.00781C39 7.90482 38.272 8.63281 37.375 8.63281Z" fill="#757575" />
+                  <path d="M37.375 33.5493H1.625C0.727997 33.5493 0 32.8213 0 31.9243C0 31.0273 0.727997 30.2993 1.625 30.2993H37.375C38.272 30.2993 39 31.0273 39 31.9243C39 32.8213 38.272 33.5493 37.375 33.5493Z" fill="#757575" />
+                </svg>
+                <span className="text-sm text-gray-500">Others</span>
+              </button>
+            </div>
+          </div>
+
+          {children}
+
+          {/* footer */}
+          <section className='hidden md:block bg-white text-gray-900'>
+            <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
+              <div className="p-6 bg-footnote rounded-lg shadow">
+                <footer className="bg-footnote ">
+                  <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                    <div className="md:flex md:justify-between">
+                      <div className="mb-6 me-36 md:mb-0">
+                        <a href="#" className="flex items-center">
+                          <img src="/logo.svg" className="h-8 me-3" alt="Logo" />
+                        </a>
+                        <p className='text-gray-500 text-sm my-5'>Jl. Prof. DR. Satrio No.7, RT.3/RW.3, Karet Kuningan, <br />
+                          Kecamatan Setiabudi, Kota Jakarta Selatan, <br />
+                          Daerah Khusus Ibukota Jakarta 12950</p>
+                        <svg width="136" height="40" viewBox="0 0 136 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="40" height="40" rx="20" fill="#8BAC3E" />
+                          <path d="M12.5 16.6667L19.075 21.0501C19.3489 21.2328 19.6708 21.3303 20 21.3303C20.3292 21.3303 20.6511 21.2328 20.925 21.0501L27.5 16.6667M14.1667 25.8334H25.8333C26.2754 25.8334 26.6993 25.6578 27.0118 25.3453C27.3244 25.0327 27.5 24.6088 27.5 24.1667V15.8334C27.5 15.3914 27.3244 14.9675 27.0118 14.6549C26.6993 14.3423 26.2754 14.1667 25.8333 14.1667H14.1667C13.7246 14.1667 13.3007 14.3423 12.9882 14.6549C12.6756 14.9675 12.5 15.3914 12.5 15.8334V24.1667C12.5 24.6088 12.6756 25.0327 12.9882 25.3453C13.3007 25.6578 13.7246 25.8334 14.1667 25.8334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <rect x="48" width="40" height="40" rx="20" fill="white" />
+                          <path d="M60.9882 12.9882C60.6756 13.3007 60.5 13.7246 60.5 14.1667V15C60.5 21.9033 66.0967 27.5 73 27.5H73.8333C74.2754 27.5 74.6993 27.3244 75.0118 27.0118C75.3244 26.6993 75.5 26.2754 75.5 25.8333V23.1008C75.5 22.9259 75.445 22.7553 75.3427 22.6134C75.2404 22.4714 75.096 22.3653 74.93 22.31L71.1858 21.0617C70.9956 20.9984 70.7888 21.0059 70.6036 21.0827C70.4184 21.1596 70.2671 21.3006 70.1775 21.48L69.2358 23.3608C67.1954 22.4389 65.5611 20.8046 64.6392 18.7642L66.52 17.8225C66.6994 17.7329 66.8404 17.5816 66.9173 17.3964C66.9941 17.2112 67.0016 17.0044 66.9383 16.8142L65.69 13.07C65.6348 12.9041 65.5287 12.7598 65.387 12.6575C65.2452 12.5552 65.0748 12.5001 64.9 12.5H62.1667C61.7246 12.5 61.3007 12.6756 60.9882 12.9882Z" stroke="#8BAC3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <rect x="96" width="40" height="40" rx="20" fill="white" />
+                          <path d="M116 13.8719C117.996 13.8719 118.233 13.8793 119.021 13.9155C121.047 14.0077 121.993 14.9689 122.086 16.9798C122.122 17.7679 122.129 18.0046 122.129 20.0005C122.129 21.9971 122.121 22.2332 122.086 23.0213C121.993 25.0303 121.049 25.9934 119.021 26.0856C118.233 26.1217 117.997 26.1292 116 26.1292C114.004 26.1292 113.767 26.1217 112.979 26.0856C110.948 25.9928 110.007 25.0272 109.915 23.0206C109.879 22.2326 109.871 21.9965 109.871 19.9999C109.871 18.004 109.879 17.7679 109.915 16.9792C110.008 14.9689 110.951 14.0071 112.979 13.9149C113.768 13.8793 114.004 13.8719 116 13.8719ZM116 12.5244C113.97 12.5244 113.716 12.5331 112.918 12.5693C110.203 12.6939 108.694 14.2002 108.57 16.9175C108.533 17.7155 108.524 17.9697 108.524 19.9999C108.524 22.0301 108.533 22.2849 108.569 23.0823C108.694 25.7972 110.2 27.306 112.918 27.4306C113.716 27.4667 113.97 27.4754 116 27.4754C118.03 27.4754 118.285 27.4667 119.082 27.4306C121.795 27.306 123.307 25.7997 123.43 23.0823C123.467 22.2849 123.475 22.0301 123.475 19.9999C123.475 17.9697 123.467 17.7155 123.431 16.9181C123.308 14.2058 121.8 12.6945 119.083 12.5699C118.285 12.5331 118.03 12.5244 116 12.5244V12.5244ZM116 16.1612C113.88 16.1612 112.161 17.88 112.161 19.9999C112.161 22.1198 113.88 23.8392 116 23.8392C118.12 23.8392 119.839 22.1205 119.839 19.9999C119.839 17.88 118.12 16.1612 116 16.1612ZM116 22.4918C114.624 22.4918 113.508 21.3767 113.508 19.9999C113.508 18.6238 114.624 17.5081 116 17.5081C117.376 17.5081 118.492 18.6238 118.492 19.9999C118.492 21.3767 117.376 22.4918 116 22.4918ZM119.991 15.1128C119.495 15.1128 119.093 15.5146 119.093 16.0099C119.093 16.5051 119.495 16.9069 119.991 16.9069C120.486 16.9069 120.887 16.5051 120.887 16.0099C120.887 15.5146 120.486 15.1128 119.991 15.1128Z" fill="#8BAC3E" />
+                        </svg>
+                      </div>
+                      <div className="grid grid-cols-3">
+                        <div>
+                          <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Categories</h2>
+                          <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Cupcake</a>
+                            </li>
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Pizza</a>
+                            </li>
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Kebab</a>
+                            </li>
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Salmon</a>
+                            </li>
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Dougnut</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">About us</h2>
+                          <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline ">About us</a>
+                            </li>
+                            <li className='mb-4'>
+                              <a href="#" className="hover:underline">FAQ</a>
+                            </li>
+                            <li className='mb-4'>
+                              <a href="#" className="hover:underline">Report Problem</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">Newsletter</h2>
+                          <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                            <li className="mb-4">
+                              <a href="#" className="hover:underline">Get now free 50% discount for alll products on your first order</a>
+                            </li>
+                            <li className="mb-4">
+                              <form>
+                                <label htmlFor="email" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                                <div className="relative">
+                                  <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                  </div>
+                                  <input type="email" id="email" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Your Email Address" required />
+                                  <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-hijau2  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Send</button>
+                                </div>
+                              </form>
+                            </li>
+                            <li className='mb-4'>
+                              <div className='flex'>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2.5 6.66675L9.075 11.0501C9.34888 11.2328 9.67075 11.3303 10 11.3303C10.3292 11.3303 10.6511 11.2328 10.925 11.0501L17.5 6.66675M4.16667 15.8334H15.8333C16.2754 15.8334 16.6993 15.6578 17.0118 15.3453C17.3244 15.0327 17.5 14.6088 17.5 14.1667V5.83341C17.5 5.39139 17.3244 4.96746 17.0118 4.6549C16.6993 4.34234 16.2754 4.16675 15.8333 4.16675H4.16667C3.72464 4.16675 3.30072 4.34234 2.98816 4.6549C2.67559 4.96746 2.5 5.39139 2.5 5.83341V14.1667C2.5 14.6088 2.67559 15.0327 2.98816 15.3453C3.30072 15.6578 3.72464 15.8334 4.16667 15.8334Z" stroke="#8BAC3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p className='mx-2 text-gray-900'>elemesid@gmail.com</p>
+                              </div>
+                            </li>
+                            <li className='mb-4'>
+                              <div className='flex'>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_307_5547)">
+                                    <path d="M3.98816 1.98816C3.67559 2.30072 3.5 2.72464 3.5 3.16667V4C3.5 10.9033 9.09667 16.5 16 16.5H16.8333C17.2754 16.5 17.6993 16.3244 18.0118 16.0118C18.3244 15.6993 18.5 15.2754 18.5 14.8333V12.1008C18.5 11.9259 18.445 11.7553 18.3427 11.6134C18.2404 11.4714 18.096 11.3653 17.93 11.31L14.1858 10.0617C13.9956 9.99841 13.7888 10.0059 13.6036 10.0827C13.4184 10.1596 13.2671 10.3006 13.1775 10.48L12.2358 12.3608C10.1954 11.4389 8.5611 9.80462 7.63917 7.76417L9.52 6.8225C9.69938 6.73288 9.84042 6.58158 9.91726 6.39637C9.9941 6.21116 10.0016 6.00445 9.93833 5.81417L8.69 2.07C8.63475 1.90413 8.52874 1.75984 8.38696 1.65754C8.24519 1.55525 8.07483 1.50013 7.9 1.5H5.16667C4.72464 1.5 4.30072 1.67559 3.98816 1.98816Z" stroke="#8BAC3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_307_5547">
+                                      <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <p className='mx-2 text-gray-900'> 0888 1111 2222</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <hr className="my-6 sm:mx-auto  lg:my-8" />
+                    <div className="sm:flex sm:items-center sm:justify-between">
+                      <span className="text-sm text-gray-500 sm:text-center mx-auto">© 2021 Elemes id. All rights reserved
+                      </span>
+
+                    </div>
+                  </div>
+                </footer>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </body>
     </html>
   )
 }
