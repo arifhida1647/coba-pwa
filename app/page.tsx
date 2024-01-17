@@ -1,5 +1,5 @@
 
-import SwiperComponents from './components/swiperComponents';
+import SwiperComponents from './component/swiperComponents';
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 // import Swiper core and required modules
